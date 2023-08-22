@@ -205,7 +205,6 @@
             label2.Size = new Size(108, 38);
             label2.TabIndex = 2;
             label2.Text = "Pitanja";
-            //label2.Click += label2_Click;
             // 
             // panel3
             // 
@@ -221,7 +220,7 @@
             // 
             // pictureBox3
             // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Image = Properties.Resources._47576;
             pictureBox3.Location = new Point(8, 352);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(57, 55);
@@ -232,7 +231,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Image = Properties.Resources.png_clipart_checklist_icon_computer_icons_management_symbol_clipboard_icon_design_summary_miscellaneous_company_removebg_preview;
             pictureBox1.Location = new Point(11, 263);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(57, 57);
@@ -243,7 +242,7 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Image = Properties.Resources.Screenshot_2023_08_18_133210_removebg_preview;
             pictureBox2.Location = new Point(8, 175);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(57, 55);

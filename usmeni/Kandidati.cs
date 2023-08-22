@@ -187,12 +187,12 @@ namespace usmeni
 
         private string HesiranjePassworda(string pass)
         {
-            using(SHA256 shaH = SHA256.Create())
+            using (SHA256 shaH = SHA256.Create())
             {
                 byte[] niz = shaH.ComputeHash(Encoding.UTF8.GetBytes(pass));
 
                 StringBuilder sb = new StringBuilder();
-                for(int i = 0; i < niz.Length; i++)
+                for (int i = 0; i < niz.Length; i++)
                 {
                     sb.Append(niz[i].ToString("x2"));
                 }

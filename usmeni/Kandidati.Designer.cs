@@ -70,8 +70,8 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(8, 175);
+            pictureBox2.Image = Properties.Resources.Screenshot_2023_08_18_133526_removebg_preview;
+            pictureBox2.Location = new Point(8, 180);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(57, 55);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -81,7 +81,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Image = Properties.Resources.png_clipart_checklist_icon_computer_icons_management_symbol_clipboard_icon_design_summary_miscellaneous_company_removebg_preview;
             pictureBox1.Location = new Point(11, 263);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(57, 55);
@@ -92,7 +92,7 @@
             // 
             // pictureBox3
             // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Image = Properties.Resources._47576;
             pictureBox3.Location = new Point(8, 352);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(57, 55);
@@ -233,7 +233,6 @@
             KandidatIme.Size = new Size(238, 27);
             KandidatIme.TabIndex = 5;
             KandidatIme.Text = "Ime";
-            //KandidatIme.TextChanged += KandidatIme_TextChanged;
             // 
             // label1
             // 

@@ -34,7 +34,7 @@ namespace usmeni
             pitanjaGrid.DataSource = datas.Tables[0];
             conn.Close();
         }
-        
+
         int pId = 0;
         private void pitanjaGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

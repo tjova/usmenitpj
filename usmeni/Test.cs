@@ -867,8 +867,6 @@ namespace usmeni
                 cmd.Parameters.AddWithValue("@Vreme", bazaformat);
                 cmd.Parameters.AddWithValue("@Poeni", poeni);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Datum : " + datumTesta.Value.Date);
-                MessageBox.Show("Datum : " + tacnovreme);
                 MessageBox.Show("Vas rezultat je sacuvan");
 
                 SqlDataAdapter adapter1 = new SqlDataAdapter("SELECT COUNT(*) FROM Testiranje WHERE KandidatID = " + Login.trazeniKorisnikId, conn);
@@ -880,8 +878,6 @@ namespace usmeni
                     brojTestova = (int)table1.Rows[0][0];
                 }
 
-                MessageBox.Show("" + brojTestova);
-
                 SqlDataAdapter adapter3 = new SqlDataAdapter("SELECT SUM(Poeni) FROM Testiranje WHERE KandidatID = " + Login.trazeniKorisnikId, conn);
                 DataTable table3 = new DataTable();
                 adapter3.Fill(table3);
@@ -891,10 +887,9 @@ namespace usmeni
                     ukupanBrPoena = (int)table3.Rows[0][0];
                 }
 
-                MessageBox.Show("" + ukupanBrPoena);
 
                 int promena = ukupanBrPoena / brojTestova;
-                MessageBox.Show("" + promena);
+
 
                 SqlCommand commandU = new SqlCommand("UPDATE Korisnik SET Uspeh = @Uspeh where KId = " + Login.trazeniKorisnikId, conn);
                 commandU.Parameters.AddWithValue("@Uspeh", promena);
