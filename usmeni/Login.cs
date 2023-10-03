@@ -20,7 +20,7 @@ namespace usmeni
             InitializeComponent();
         }
 
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\tjova\Documents\portalbaza.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\tjova\Documents\bazasajt.mdf;Integrated Security=True;Connect Timeout=30");
 
         public static string KorisnikUser = "";
         public static int trazeniKorisnikId = 0;

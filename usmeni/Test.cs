@@ -36,11 +36,9 @@ namespace usmeni
             progressBar1.Value = 0;
 
             timer1.Start();
-
-
         }
 
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\tjova\Documents\portalbaza.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\tjova\Documents\bazasajt.mdf;Integrated Security=True;Connect Timeout=30");
 
         int brojP;
         private int brojPitanja()
@@ -64,7 +62,7 @@ namespace usmeni
 
             while (brojevi.Count < 10)
             {
-                brojevi.Add(random.Next(18, 18 + brojP - 1));
+                brojevi.Add(random.Next(15, 15 + brojP - 1));
             }
 
             for (int i = 0; i < 10; i++)

@@ -14,7 +14,8 @@ namespace usmeni
             PrikaziPitanja();
         }
 
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\tjova\Documents\portalbaza.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\tjova\Documents\bazasajt.mdf;Integrated Security=True;Connect Timeout=30");
+
         private void ResetujPodatke()
         {
             tekstPitanja.Text = "";
@@ -54,11 +55,6 @@ namespace usmeni
             {
                 pId = Convert.ToInt32(row.Cells[0].Value.ToString());
             }
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void dugmeSacuvajPitanja_Click(object sender, EventArgs e)
@@ -132,28 +128,25 @@ namespace usmeni
             }
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void pekranKandidati_Click(object sender, EventArgs e)
         {
             Kandidati kandidati = new Kandidati();
             kandidati.Show();
             this.Hide();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void prezultatiEkran_Click(object sender, EventArgs e)
         {
-
             Rezultati r = new Rezultati();
             r.Show();
             this.Hide();
         }
 
-        private void pictureBox3_Click_1(object sender, EventArgs e)
+        private void pekranLogout_Click(object sender, EventArgs e)
         {
             Login login = new Login();
             login.Show();
             this.Hide();
         }
-
-
     }
 }

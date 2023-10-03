@@ -20,7 +20,8 @@ namespace usmeni
             PrikaziRezultate();
         }
 
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\tjova\Documents\portalbaza.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\tjova\Documents\bazasajt.mdf;Integrated Security=True;Connect Timeout=30");
+
         private void prikaziKorisnike()
         {
             conn.Open();
@@ -38,7 +39,6 @@ namespace usmeni
             conn.Open();
             string query = "SELECT * FROM Testiranje";
             SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-            SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
             var datas = new DataSet();
             adapter.Fill(datas);
             rezultatiGrid.DataSource = datas.Tables[0];
@@ -50,7 +50,6 @@ namespace usmeni
             conn.Open();
             string query = "SELECT * FROM Testiranje INNER JOIN Korisnik ON Korisnik.KId = Testiranje.KandidatID WHERE Korisnik.Username ='" + KandidaticomboBox1.SelectedValue.ToString() + "'";
             SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-            SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
             var datas = new DataSet();
             adapter.Fill(datas);
             rezultatiGrid.DataSource = datas.Tables[0];
@@ -62,39 +61,21 @@ namespace usmeni
             filterKorisnik();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void ekranKorisnici_Click(object sender, EventArgs e)
         {
             Kandidati kandidati = new Kandidati();
             kandidati.Show();
             this.Hide();
         }
 
-        private void rezultatiGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-
-        private void KandidaticomboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click_1(object sender, EventArgs e)
+        private void ekranPitanja_Click(object sender, EventArgs e)
         {
             Pitanja pitanja = new Pitanja();
             pitanja.Show();
             this.Hide();
         }
 
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-            Kandidati kandidati = new Kandidati();
-            kandidati.Show();
-            this.Hide();
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void ekranLogout_Click(object sender, EventArgs e)
         {
             Login login = new Login();
             login.Show();

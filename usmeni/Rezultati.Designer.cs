@@ -35,9 +35,9 @@
             rezultatiGrid = new DataGridView();
             panel2 = new Panel();
             panel3 = new Panel();
-            pictureBox3 = new PictureBox();
-            pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
+            ekranLogout = new PictureBox();
+            ekranKorisnici = new PictureBox();
+            ekranPitanja = new PictureBox();
             pictureBox8 = new PictureBox();
             label7 = new Label();
             label5 = new Label();
@@ -47,9 +47,9 @@
             ((System.ComponentModel.ISupportInitialize)rezultatiGrid).BeginInit();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ekranLogout).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ekranKorisnici).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ekranPitanja).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             SuspendLayout();
             // 
@@ -93,7 +93,6 @@
             rezultatiGrid.RowTemplate.Height = 29;
             rezultatiGrid.Size = new Size(1044, 448);
             rezultatiGrid.TabIndex = 11;
-            rezultatiGrid.CellContentClick += rezultatiGrid_CellContentClick;
             // 
             // panel2
             // 
@@ -117,47 +116,47 @@
             // panel3
             // 
             panel3.BackColor = Color.DarkMagenta;
-            panel3.Controls.Add(pictureBox3);
-            panel3.Controls.Add(pictureBox1);
-            panel3.Controls.Add(pictureBox2);
+            panel3.Controls.Add(ekranLogout);
+            panel3.Controls.Add(ekranKorisnici);
+            panel3.Controls.Add(ekranPitanja);
             panel3.Dock = DockStyle.Right;
             panel3.Location = new Point(1398, 0);
             panel3.Name = "panel3";
             panel3.Size = new Size(77, 628);
             panel3.TabIndex = 19;
             // 
-            // pictureBox3
+            // ekranLogout
             // 
-            pictureBox3.Image = Properties.Resources._47576;
-            pictureBox3.Location = new Point(8, 429);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(57, 55);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 3;
-            pictureBox3.TabStop = false;
-            pictureBox3.Click += pictureBox3_Click;
+            ekranLogout.Image = Properties.Resources._47576;
+            ekranLogout.Location = new Point(8, 429);
+            ekranLogout.Name = "ekranLogout";
+            ekranLogout.Size = new Size(57, 55);
+            ekranLogout.SizeMode = PictureBoxSizeMode.Zoom;
+            ekranLogout.TabIndex = 3;
+            ekranLogout.TabStop = false;
+            ekranLogout.Click += ekranLogout_Click;
             // 
-            // pictureBox1
+            // ekranKorisnici
             // 
-            pictureBox1.Image = Properties.Resources.Screenshot_2023_08_18_133210_removebg_preview;
-            pictureBox1.Location = new Point(8, 235);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(57, 55);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 2;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click_1;
+            ekranKorisnici.Image = Properties.Resources.Screenshot_2023_08_18_133210_removebg_preview;
+            ekranKorisnici.Location = new Point(8, 235);
+            ekranKorisnici.Name = "ekranKorisnici";
+            ekranKorisnici.Size = new Size(57, 55);
+            ekranKorisnici.SizeMode = PictureBoxSizeMode.Zoom;
+            ekranKorisnici.TabIndex = 2;
+            ekranKorisnici.TabStop = false;
+            ekranKorisnici.Click += ekranKorisnici_Click;
             // 
-            // pictureBox2
+            // ekranPitanja
             // 
-            pictureBox2.Image = Properties.Resources.Screenshot_2023_08_18_133526_removebg_preview;
-            pictureBox2.Location = new Point(8, 329);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(57, 55);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 1;
-            pictureBox2.TabStop = false;
-            pictureBox2.Click += pictureBox2_Click_1;
+            ekranPitanja.Image = Properties.Resources.Screenshot_2023_08_18_133526_removebg_preview;
+            ekranPitanja.Location = new Point(8, 329);
+            ekranPitanja.Name = "ekranPitanja";
+            ekranPitanja.Size = new Size(57, 55);
+            ekranPitanja.SizeMode = PictureBoxSizeMode.Zoom;
+            ekranPitanja.TabIndex = 1;
+            ekranPitanja.TabStop = false;
+            ekranPitanja.Click += ekranPitanja_Click;
             // 
             // pictureBox8
             // 
@@ -197,7 +196,6 @@
             KandidaticomboBox1.Size = new Size(151, 28);
             KandidaticomboBox1.TabIndex = 15;
             KandidaticomboBox1.Text = "Kandidati";
-            KandidaticomboBox1.SelectedIndexChanged += KandidaticomboBox1_SelectedIndexChanged;
             KandidaticomboBox1.SelectionChangeCommitted += KandidaticomboBox1_SelectionChangeCommitted;
             // 
             // label4
@@ -233,9 +231,9 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ekranLogout).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ekranKorisnici).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ekranPitanja).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ResumeLayout(false);
         }
@@ -254,8 +252,8 @@
         private Label label7;
         private PictureBox pictureBox8;
         private Panel panel3;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
+        private PictureBox ekranLogout;
+        private PictureBox ekranKorisnici;
+        private PictureBox ekranPitanja;
     }
 }

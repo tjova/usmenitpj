@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kandidati));
             panel3 = new Panel();
-            pictureBox2 = new PictureBox();
-            pictureBox1 = new PictureBox();
-            pictureBox3 = new PictureBox();
+            kEkranpitanja = new PictureBox();
+            kEkranRezultati = new PictureBox();
+            kEkranlogout = new PictureBox();
             panel2 = new Panel();
             pictureBox4 = new PictureBox();
             KandidatPassword = new TextBox();
@@ -48,9 +48,9 @@
             label1 = new Label();
             label3 = new Label();
             panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)kEkranpitanja).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)kEkranRezultati).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)kEkranlogout).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -59,47 +59,47 @@
             // panel3
             // 
             panel3.BackColor = Color.DarkMagenta;
-            panel3.Controls.Add(pictureBox2);
-            panel3.Controls.Add(pictureBox1);
-            panel3.Controls.Add(pictureBox3);
+            panel3.Controls.Add(kEkranpitanja);
+            panel3.Controls.Add(kEkranRezultati);
+            panel3.Controls.Add(kEkranlogout);
             panel3.Dock = DockStyle.Right;
             panel3.Location = new Point(1357, 0);
             panel3.Name = "panel3";
             panel3.Size = new Size(76, 566);
             panel3.TabIndex = 0;
             // 
-            // pictureBox2
+            // kEkranpitanja
             // 
-            pictureBox2.Image = Properties.Resources.Screenshot_2023_08_18_133526_removebg_preview;
-            pictureBox2.Location = new Point(8, 180);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(57, 55);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 6;
-            pictureBox2.TabStop = false;
-            pictureBox2.Click += pictureBox2_Click_1;
+            kEkranpitanja.Image = Properties.Resources.Screenshot_2023_08_18_133526_removebg_preview;
+            kEkranpitanja.Location = new Point(8, 180);
+            kEkranpitanja.Name = "kEkranpitanja";
+            kEkranpitanja.Size = new Size(57, 55);
+            kEkranpitanja.SizeMode = PictureBoxSizeMode.Zoom;
+            kEkranpitanja.TabIndex = 6;
+            kEkranpitanja.TabStop = false;
+            kEkranpitanja.Click += kEkranpitanja_Click;
             // 
-            // pictureBox1
+            // kEkranRezultati
             // 
-            pictureBox1.Image = Properties.Resources.png_clipart_checklist_icon_computer_icons_management_symbol_clipboard_icon_design_summary_miscellaneous_company_removebg_preview;
-            pictureBox1.Location = new Point(11, 263);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(57, 55);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 5;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
+            kEkranRezultati.Image = Properties.Resources.png_clipart_checklist_icon_computer_icons_management_symbol_clipboard_icon_design_summary_miscellaneous_company_removebg_preview;
+            kEkranRezultati.Location = new Point(11, 263);
+            kEkranRezultati.Name = "kEkranRezultati";
+            kEkranRezultati.Size = new Size(57, 55);
+            kEkranRezultati.SizeMode = PictureBoxSizeMode.Zoom;
+            kEkranRezultati.TabIndex = 5;
+            kEkranRezultati.TabStop = false;
+            kEkranRezultati.Click += kEkranRezultati_Click;
             // 
-            // pictureBox3
+            // kEkranlogout
             // 
-            pictureBox3.Image = Properties.Resources._47576;
-            pictureBox3.Location = new Point(8, 352);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(57, 55);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 4;
-            pictureBox3.TabStop = false;
-            pictureBox3.Click += pictureBox3_Click_1;
+            kEkranlogout.Image = Properties.Resources._47576;
+            kEkranlogout.Location = new Point(8, 352);
+            kEkranlogout.Name = "kEkranlogout";
+            kEkranlogout.Size = new Size(57, 55);
+            kEkranlogout.SizeMode = PictureBoxSizeMode.Zoom;
+            kEkranlogout.TabIndex = 4;
+            kEkranlogout.TabStop = false;
+            kEkranlogout.Click += kEkranlogout_Click;
             // 
             // panel2
             // 
@@ -141,7 +141,6 @@
             KandidatPassword.Size = new Size(238, 27);
             KandidatPassword.TabIndex = 16;
             KandidatPassword.Text = "Password";
-            KandidatPassword.TextChanged += KandidatPassword_TextChanged;
             // 
             // dugmeResetuj
             // 
@@ -161,7 +160,6 @@
             KandidatUsername.Size = new Size(238, 27);
             KandidatUsername.TabIndex = 13;
             KandidatUsername.Text = "Username";
-            KandidatUsername.TextChanged += KandidatUsername_TextChanged;
             // 
             // dugmeIzmeni
             // 
@@ -203,7 +201,6 @@
             KandidatAdresa.Size = new Size(238, 27);
             KandidatAdresa.TabIndex = 8;
             KandidatAdresa.Text = "Adresa";
-            KandidatAdresa.TextChanged += KandidatAdresa_TextChanged;
             // 
             // KandidatEmail
             // 
@@ -213,7 +210,6 @@
             KandidatEmail.Size = new Size(238, 27);
             KandidatEmail.TabIndex = 7;
             KandidatEmail.Text = "Email";
-            KandidatEmail.TextChanged += KandidatEmail_TextChanged;
             // 
             // KandidatPrezime
             // 
@@ -223,7 +219,6 @@
             KandidatPrezime.Size = new Size(238, 27);
             KandidatPrezime.TabIndex = 6;
             KandidatPrezime.Text = "Prezime";
-            KandidatPrezime.TextChanged += KandidatPrezime_TextChanged;
             // 
             // KandidatIme
             // 
@@ -264,9 +259,9 @@
             Name = "Kandidati";
             Text = "Kandidati";
             panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)kEkranpitanja).EndInit();
+            ((System.ComponentModel.ISupportInitialize)kEkranRezultati).EndInit();
+            ((System.ComponentModel.ISupportInitialize)kEkranlogout).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
@@ -290,9 +285,9 @@
         private TextBox KandidatUsername;
         private Button dugmeResetuj;
         private TextBox KandidatPassword;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
+        private PictureBox kEkranlogout;
+        private PictureBox kEkranRezultati;
+        private PictureBox kEkranpitanja;
         private PictureBox pictureBox4;
     }
 }

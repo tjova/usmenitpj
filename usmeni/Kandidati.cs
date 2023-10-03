@@ -18,11 +18,9 @@ namespace usmeni
         {
             InitializeComponent();
             PrikaziKorisnike();
-
         }
 
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\tjova\Documents\portalbaza.mdf;Integrated Security=True;Connect Timeout=30");
-
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\tjova\Documents\bazasajt.mdf;Integrated Security=True;Connect Timeout=30");
 
         private void ResetujPodatke()
         {
@@ -39,11 +37,12 @@ namespace usmeni
             conn.Open();
             string query = "SELECT * FROM Korisnik";
             SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-            SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+            //SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
             var datas = new DataSet();
             adapter.Fill(datas);
             dataGridView1.DataSource = datas.Tables[0];
             conn.Close();
+
         }
 
         private void dugmeSacuvaj_Click(object sender, EventArgs e)
@@ -79,27 +78,6 @@ namespace usmeni
                     MessageBox.Show(Ex.Message);
                 }
             }
-        }
-
-        private void KandidatAdresa_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void KandidatUsername_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void KandidatPassword_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void KandidatPrezime_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void KandidatEmail_TextChanged(object sender, EventArgs e)
-        {
         }
 
         private void dugmeResetuj_Click(object sender, EventArgs e)
@@ -164,27 +142,6 @@ namespace usmeni
 
         }
 
-        private void pictureBox2_Click_1(object sender, EventArgs e)
-        {
-            Pitanja pitanja = new Pitanja();
-            pitanja.Show();
-            this.Hide();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            Rezultati rez = new Rezultati();
-            rez.Show();
-            this.Hide();
-        }
-
-        private void pictureBox3_Click_1(object sender, EventArgs e)
-        {
-            Login login = new Login();
-            login.Show();
-            this.Hide();
-        }
-
         private string HesiranjePassworda(string pass)
         {
             using (SHA256 shaH = SHA256.Create())
@@ -199,6 +156,27 @@ namespace usmeni
 
                 return sb.ToString();
             }
+        }
+
+        private void kEkranpitanja_Click(object sender, EventArgs e)
+        {
+            Pitanja pitanja = new Pitanja();
+            pitanja.Show();
+            this.Hide();
+        }
+
+        private void kEkranRezultati_Click(object sender, EventArgs e)
+        {
+            Rezultati rez = new Rezultati();
+            rez.Show();
+            this.Hide();
+        }
+
+        private void kEkranlogout_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
         }
     }
 }
